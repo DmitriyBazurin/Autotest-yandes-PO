@@ -1,4 +1,3 @@
-from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -20,24 +19,23 @@ class BasePage(object):
         return self.driver.current_url
 
     def get(self, url):
-        self.driver.get(url)
-        self.driver.implicitly_wait(10)
+        return self.driver.get(url).implicitly_wait(10)
 
-    def screenshot(self, file_name='screenshot.png'):
-        self.driver.save_screenshot(file_name)
+
+    # def screenshot(self, file_name='screenshot.png'):
+    #     return self.driver.save_screenshot(file_name)
 
     # def get_href(self):
     #     elems = self.driver.find_elements_by_css_selector(".sc-eYdvao.kvdWiq [href]")
     #     links = [elem.get_attribute('href') for elem in elems]
 
     def refresh(self):
-        self.driver.refresh()
+        return self.driver.refresh()
 
     def go_back(self):
-        self.driver.back()
+        return self.driver.back()
 
-    # def screenshot(self, file_name='screenshot.png'):
-    #     self.driver.save_screenshot(file_name)
+
 
 
 

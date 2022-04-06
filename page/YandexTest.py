@@ -1,10 +1,7 @@
 from .BaseApp import BasePage
 from selenium.webdriver.common.by import By
 
-
-
-
-class YandexMethods(BasePage):
+class YandexTest(BasePage):
 
 
     element_yandex_search_field = (By.ID, "text")
@@ -18,10 +15,6 @@ class YandexMethods(BasePage):
     element_href_tensor = (By.CSS_SELECTOR, '[href="https://tensor.ru/"]')
 
     # elements_yandex_search_result = (By.CSS_SELECTOR, '#search-result [accesskey]')
-
-
-
-
 
     def go_to_site(self):
         self.base_url = "https://yandex.ru/"
@@ -65,9 +58,6 @@ class YandexMethods(BasePage):
     #     for elem in elements:
 
 
-    # def get_href(self):
-    #     elems = self.find_element(".sc-eYdvao.kvdWiq [href]")
-    #     links = [elem.get_attribute('href') for elem in elems]
 
 
 

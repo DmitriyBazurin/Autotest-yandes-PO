@@ -1,9 +1,10 @@
 # Tensor
  tensor homework
 
- 1.Настраиваем виртуальною среду для наших тестов и устанавливаем всё необходимо програмное обеспечение:
-    -pip install pipenv
-    -pipenv shell
-    -pip install selenium
-    -pip install pytest
+Файл с тестом - test_smoke_yandex.py
+в папке page находятся: BaseApp.py - базовые методы для работы с Webdriver
+                        YandexTest.py - класс c методами и элементами для веб-страницы
+в файле conftest.py находится фикстура для запуска и закрытия браузера
+    с возможностью выбора браузера(--browser_name=chrome or firefox)
+команда запуска теста: pytest -v test_smoke_yandex.py
     
