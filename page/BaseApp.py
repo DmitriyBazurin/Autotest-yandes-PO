@@ -22,8 +22,8 @@ class BasePage(object):
         return self.driver.get(url).implicitly_wait(10)
 
 
-    # def screenshot(self, file_name='screenshot.png'):
-    #     return self.driver.save_screenshot(file_name)
+    def screenshot(self, file_name=''):
+        return self.driver.save_screenshot(file_name)
 
     # def get_href(self):
     #     elems = self.driver.find_elements_by_css_selector(".sc-eYdvao.kvdWiq [href]")

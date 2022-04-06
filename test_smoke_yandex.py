@@ -8,8 +8,10 @@ def test_yandex_search(browser):
     page.enter_word("Тензор")
     page.enter_word(Keys.DOWN)
     # проверка наличия элемента suggest
+    page.screenshot()
     assert page.find_suggest_list()
     page.enter_word(Keys.ENTER)
+    page.screenshot()
     # проверка наличия эелемента с адресом "https://tensor.ru/"
     assert page.find_href_tensor()
 
@@ -20,6 +22,7 @@ def test_yandex_pictures(browser):
     tabs = browser.window_handles
     browser.switch_to.window(tabs[1])
     get_url = page.get_current_url()
+    page.screenshot()
     # проверка перехода по адресу yandex.ru/images
     assert 'yandex.ru/images' in get_url
     page.click_on_the_1st_pictures_img()
@@ -30,6 +33,7 @@ def test_yandex_pictures(browser):
     page.click_on_the_prev_picture_yandex()
     time.sleep(1)
     pic2 = page.get_current_url()
+    page.screenshot()
     # проверка возврата на прошлый адрес
     assert pic1 == pic2
 
