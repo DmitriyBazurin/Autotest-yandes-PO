@@ -1,6 +1,7 @@
 # Tensor
  tensor homework
 
+тестовое задание реализовано с использованием PyTest
 Файл с тестом - test_smoke_yandex.py
 в папке page находятся: BaseApp.py - базовые методы для работы с Webdriver
                         YandexTest.py - класс c методами и элементами для веб-страницы
